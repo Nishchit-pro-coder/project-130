@@ -44,16 +44,60 @@ function draw()
     fill("#FF0000");
     stroke("#FF0000")
 
+
+
     if(scoreRightWrist > 0.2)
     {
         circle(rightWristX, rightWristY, 20);
-    }
-    if(scoreLeftWrist > 0.2)
-    {
-        circle(leftWristX, leftWristY, 20);
+
+        if (rightWristY >0 && rightWristY <= 100)
+        {
+            document.getElementById("speed").innerHTML = "speed = 0.5x";
+            song.rate(0.5);
+        }
+
+        else if (rightWristY >100 && rightWristY <= 200)
+        {
+            document.getElementById("speed").innerHTML = "speed = 1x";
+            song1.rate(1);
+            song2.rate(1);
+            song3.rate(1);
+            song4.rate(1);
+            song5.rate(1);
+        }
+        
+        else if (rightWristY >200 && rightWristY <= 300)
+        {
+            document.getElementById("speed").innerHTML = "speed = 1.5x";
+            song1.rate(1.5);
+            song2.rate(1.5);
+            song3.rate(1.5);
+            song4.rate(1.5);
+            song5.rate(1.5);
+        }
+
+        else if (rightWristY >300 && rightWristY <= 400)
+        {
+            document.getElementById("speed").innerHTML = "speed = 2x";
+            song1.rate(2);
+            song2.rate(2);
+            song3.rate(2);
+            song4.rate(2);
+            song5.rate(2);
+        }
+
+        else if (rightWristY >400 && rightWristY <= 500)
+        {
+            document.getElementById("speed").innerHTML = "speed = 2.5x";
+            song1.rate(2.5);
+            song2.rate(2.5);
+            song3.rate(2.5);
+            song4.rate(2.5);
+            song5.rate(2.5);
+        }
     }
 }
-
+    
 function stopall() 
 {
     song1.stop();
